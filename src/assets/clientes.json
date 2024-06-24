@@ -1,0 +1,33 @@
+[
+  {
+    "tipoDocumento": "C",
+    "numeroDocumento": "123456789",
+    "primerNombre": "Juan",
+    "primerApellido": "Pérez"
+  },
+  {
+    "tipoDocumento": "P",
+    "numeroDocumento": "A1234567",
+    "primerNombre": "Maria",
+    "primerApellido": "Gómez"
+    
+  },
+  {
+    "tipoDocumento": "C",
+    "numeroDocumento": "987654321",
+    "primerNombre": "Carlos",
+    "primerApellido": "Martínez"
+  },
+  {
+    "tipoDocumento": "P",
+    "numeroDocumento": "B7654321",
+    "primerNombre": "Luisa",
+    "primerApellido": "Contrera"
+  },
+  {
+    "tipoDocumento": "C",
+    "numeroDocumento": "123123123",
+    "primerNombre": "Andrea",
+    "primerApellido": "Rodríguez"
+  }
+]
