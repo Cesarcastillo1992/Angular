@@ -5,6 +5,8 @@
       <input type="text" [value]="clienteData.primerApellido" readonly class="form-control">
       <p><strong>Primer Nombre:</strong></p>
       <input type="text" [value]="clienteData.primerNombre" readonly class="form-control">
+      <br>
+      <button type="button" class="btn btn-secondary" (click)="volver()">Volver</button>
     </div>
     <div *ngIf="!clienteData">
       <p>No se encontraron datos del cliente.</p>

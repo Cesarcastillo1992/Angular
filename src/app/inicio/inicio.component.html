@@ -2,7 +2,7 @@
     <h4 style="color: #9b9b9b;">Todos los campos son obligatorios</h4>
     <form [formGroup]="form" (ngSubmit)="buscarCliente()">
       <div class="form-group">
-        <!-- <label for="tipoDocumento" style="color: blue">Tipo de Documento</label> -->
+        <label for="tipoDocumento" style="color: blue">Tipo de Documento</label>
         <br>
         <select formControlName="tipoDocumento" class="form-control" >
           <option value="" disabled selected>Seleccione...</option>
@@ -12,9 +12,9 @@
       </div>
       <br>
       <div class="form-group">
-        <!-- <label for="numeroDocumento" style="color: blue">Número de Documento</label> -->
+        <label for="numeroDocumento" style="color: blue">Número de Documento</label>
         <br>
-        <input formControlName="numeroDocumento" type="number" class="form-control"  
+        <input formControlName="numeroDocumento" type="text" class="form-control"  
           placeholder="Ingrese documento" (ngModelChange)="formatNumeroDocumento()">
       </div>
       <br>
