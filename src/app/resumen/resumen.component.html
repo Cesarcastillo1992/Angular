@@ -1,15 +1,21 @@
-<div class="container mt-5" style="text-align: center;">
-    <h3>Información Básica</h3>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="card p-5" >
     <div *ngIf="clienteData">
-      <p><strong>Primer Apellido:</strong></p>
-      <input type="text" [value]="clienteData.primerApellido" readonly class="form-control">
-      <p><strong>Primer Nombre:</strong></p>
-      <input type="text" [value]="clienteData.primerNombre" readonly class="form-control">
+      <h1>Información Básica</h1>
       <br>
-      <button type="button" class="btn btn-secondary" (click)="volver()">Volver</button>
+      <label class="form-label">Primer Apellido</label>
+      <input type="text" [value]="clienteData.primerApellido" class="form-control text-secondary" disabled>
+      <br>
+      <label class="form-label">Primer Nombre</label>
+      <input type="text" [value]="clienteData.primerNombre" class="form-control text-secondary" disabled>
+      <br>
+      <div class="text-center">
+        <button type="button" class="btn btn-secondary" (click)="volver()">Volver</button>
+      </div>
     </div>
-    <div *ngIf="!clienteData">
+    <!-- <div *ngIf="!clienteData" class="text-center">
       <p>No se encontraron datos del cliente.</p>
       <button type="button" class="btn btn-secondary" (click)="volver()">Volver</button>
-    </div>
+    </div>  -->
+  </div>  
 </div>

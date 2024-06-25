@@ -1,10 +1,12 @@
-<div class="container mt-5" style="text-align: center;">
-    <h4 style="color: #9b9b9b;">Todos los campos son obligatorios</h4>
+<div class="container d-flex justify-content-center align-items-center mt-5">  
+  <div class="card p-5">
+    <h6 class="text-secondary">Todos los campos son obligatorios</h6>
+    <br>
     <form [formGroup]="form" (ngSubmit)="buscarCliente()">
       <div class="form-group">
-        <label for="tipoDocumento" style="color: blue">Tipo de Documento</label>
+        <label for="tipoDocumento" class="text-primary form-label">Tipo de Documento</label>
         <br>
-        <select formControlName="tipoDocumento" class="form-control" >
+        <select formControlName="tipoDocumento" class="form-select" >
           <option value="" disabled selected>Seleccione...</option>
           <option value="C">Cédula de Ciudadanía</option>
           <option value="P">Pasaporte</option>
@@ -12,13 +14,18 @@
       </div>
       <br>
       <div class="form-group">
-        <label for="numeroDocumento" style="color: blue">Número de Documento</label>
+        <label for="numeroDocumento" class="text-primary form-label">Número de Documento</label>
         <br>
         <input formControlName="numeroDocumento" type="text" class="form-control"  
           placeholder="Ingrese documento" (ngModelChange)="formatNumeroDocumento()">
       </div>
       <br>
-      <br>
-      <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Buscar</button>
+      <div class="text-center">
+        <button type="submit" [ngClass]="{'btn-primary': form.valid, 
+          'btn-secondary': !form.valid}" class="btn" [disabled]="!form.valid">Buscar</button>
+      </div>
     </form>
   </div>
+</div>
+
+  
