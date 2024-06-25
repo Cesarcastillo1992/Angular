@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Cliente } from '../interfaces/cliente.interface';
 
 @Component({
   selector: 'app-resumen',
@@ -10,14 +11,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './resumen.component.css'
 })
 export class ResumenComponent implements OnInit {
-  clienteData: any;
+  clienteData !: Cliente;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    
+  }
 
   ngOnInit() {
     const storedData = localStorage.getItem('clienteData');
     if (storedData) {
-    this.clienteData = storedData ? JSON.parse(storedData) : null;
+      this.clienteData = storedData ? JSON.parse(storedData) : null;
     }
   }
 

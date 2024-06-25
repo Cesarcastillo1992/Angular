@@ -1,12 +1,12 @@
 <div class="container d-flex justify-content-center align-items-center mt-5">
   <div class="card p-5" >
     <div *ngIf="clienteData">
-      <h1>Información Básica</h1>
+      <h4>Información Básica</h4>
       <br>
-      <label class="form-label">Primer Apellido</label>
+      <label class="form-label text-secondary">Primer Apellido</label>
       <input type="text" [value]="clienteData.primerApellido" class="form-control text-secondary" disabled>
       <br>
-      <label class="form-label">Primer Nombre</label>
+      <label class="form-label text-secondary">Primer Nombre</label>
       <input type="text" [value]="clienteData.primerNombre" class="form-control text-secondary" disabled>
       <br>
       <div class="text-center">

@@ -17,15 +17,17 @@ export class InicioComponent {
   title = 'PruebaFront';
   tipoDocumento: string = '';
   numeroDocumento: string = '';
-  clientes: any[] = [];
   form: FormGroup;
-
-  constructor(private router: Router, private formBuilder: FormBuilder, private servicioCliente: ClienteService) { 
-    this.form = this.formBuilder.group({
+  
+  constructor(
+    private router: Router, 
+    private formBuilder: FormBuilder, 
+    private servicioCliente: ClienteService) { 
+      this.form = this.formBuilder.group({
       numeroDocumento: new FormControl('', [
-        Validators.required, 
-        Validators.minLength(8), 
-        Validators.maxLength(11) ]),
+      Validators.required, 
+      Validators.minLength(8), 
+      Validators.maxLength(11) ]),
       tipoDocumento: new FormControl('', Validators.required),
       
     });
